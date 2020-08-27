@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+
+    <groupId>com.learn</groupId>
+    <artifactId>JDBC-Connection-learn</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>JDBC-Connection-learn</name>
+    <url>http://www.code-world.com.cn</url>
+    <inceptionYear>2020</inceptionYear>
+
+    <properties>
+        <!-- Environment Settings -->
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!-- maven-compiler-plugin 将会使用指定的 JDK 版本将 java 文件编译为 class 文件（针对编译运行环境） -->
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <!-- maven-compiler-plugin 将会使用指定的 JDK 版本对源代码进行编译（针对编译运行环境） -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <spring.version>5.2.8.RELEASE</spring.version>
+    </properties>
+
+    <dependencies>
+
+        <!--mysql连接包-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.49</version>
+        </dependency>
+
+        <!--c3p0连接池包-->
+        <dependency>
+            <groupId>com.mchange</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>0.9.5.5</version>
+        </dependency>
+
+        <!--因为c3p0中已经自带了辅助包，所以这里不做导入-->
+        <!--c3p0连接池辅助包-->
+        <!--<dependency>-->
+            <!--<groupId>com.mchange</groupId>-->
+            <!--<artifactId>mchange-commons-java</artifactId>-->
+            <!--<version>0.2.20</version>-->
+        <!--</dependency>-->
+
+        <!--druid包-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.1.23</version>
+        </dependency>
+
+        <!--Spring JDBC包-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.6.2</version>
+            <scope>compile</scope>
+        </dependency>
+
+
+        <!--Spring JDBC包中包含了beans、core、tx三个包 所以不需要额外导入 -->
+        <!--Spring beans包-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-beans</artifactId>-->
+            <!--<version>${spring.version}</version>-->
+        <!--</dependency>-->
+
+        <!--Spring core包-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-core</artifactId>-->
+            <!--<version>${spring.version}</version>-->
+        <!--</dependency>-->
+
+
+        <!--Spring 事务包-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-tx</artifactId>-->
+            <!--<version>${spring.version}</version>-->
+        <!--</dependency>-->
+    </dependencies>
+</project>

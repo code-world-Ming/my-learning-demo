@@ -1,0 +1,10 @@
+<!--声明一个标签叫students里面可以放n个student标签-->
+<!ELEMENT students (student*) >
+<!--表示:student标签中仅能出现，name,age,sex标签-->
+<!ELEMENT student (name,age,sex)>
+<!--表示:name标签中可以输入字符-->
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT sex (#PCDATA)>
+<!--声明student标签中可以有属性，属性名为number,而且必须唯一。-->
+<!ATTLIST student number ID #REQUIRED>
